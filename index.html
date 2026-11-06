@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KYUSHOP - Financial & E-Commerce Dashboard</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LAYAR LOGIN -->
+  <div id="loginPage" class="login-container">
+    <div class="login-card">
+      <div class="brand-badge">E-Commerce Management</div>
+      <h1 class="logo-text">KYU<span>SHOP</span></h1>
+      <p class="login-subtitle">Pilih Hak Akses Portal Manajemen</p>
+      
+      <div class="role-selection">
+        <button class="role-card" onclick="loginAs('owner')">
+          <div class="role-icon">👑</div>
+          <div class="role-info">
+            <h3>Login Owner</h3>
+            <p>Akses Executive, Keuangan & Biaya Operasional</p>
+          </div>
+          <span class="arrow-btn">&rarr;</span>
+        </button>
+
+        <button class="role-card" onclick="loginAs('mitra')">
+          <div class="role-icon">🛍️</div>
+          <div class="role-info">
+            <h3>Login Mitra</h3>
+            <p>Kelola Stok Produk & Laporan Payout Bagi Hasil</p>
+          </div>
+          <span class="arrow-btn">&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYAR DASHBOARD UTAMA -->
+  <div id="dashboardApp" class="app-container hidden">
+    <header class="navbar">
+      <div class="nav-left">
+        <h2 class="nav-logo">KYU<span>SHOP</span></h2>
+        <span id="userRoleBadge" class="user-badge">Role</span>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <!-- Di-render otomatis via JavaScript -->
+      </nav>
+
+      <div class="nav-right">
+        <button class="logout-btn" onclick="logout()">Keluar Role ➔</button>
+      </div>
+    </header>
+
+    <main class="main-content" id="mainContent">
+      <!-- Layar Interaktif Di-render di Sini -->
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
